@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.hw1moxy.R;
+import com.example.hw1moxy.recycler.presenter.IRecPresenter;
 import com.example.hw1moxy.recycler.presenter.RecPresenter;
 
 import java.util.ArrayList;
@@ -17,11 +18,11 @@ import java.util.ArrayList;
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     public static final String DEBUG_LOG = "debug_log";
     ArrayList<Foto> list;
-    RecPresenter recPresenter;
+    IRecPresenter iRecPresenter;
 
-    public Adapter(ArrayList<Foto> fotos, RecPresenter recPresenter) {
+    public Adapter(ArrayList<Foto> fotos, IRecPresenter iRecPresenter) {
         this.list = fotos;
-        this.recPresenter = recPresenter;
+        this.iRecPresenter = iRecPresenter;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{
@@ -35,8 +36,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                 @Override
                 public void onClick(View v) {
                     Log.d(DEBUG_LOG, "нажали на- " + String.valueOf(getAdapterPosition()));
-                    recPresenter.incCount();
-                    Log.d(DEBUG_LOG, "колличество нажатий- " + recPresenter.getNumberCount());
+                    iRecPresenter.incCount();
+                    Log.d(DEBUG_LOG, "колличество нажатий- " + iRecPresenter.getNumberCount());
                 }
             });
         }

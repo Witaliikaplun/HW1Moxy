@@ -2,18 +2,21 @@ package com.example.hw1moxy.recycler.presenter;
 
 import com.example.hw1moxy.recycler.data.MyCount;
 
-public class RecPresenter {
+public class RecPresenter implements IRecPresenter {
     private MyCount myCount;
 
     public RecPresenter() {
         myCount = new MyCount();
     }
 
-    public void incCount(){
+
+    @Override
+    public void incCount() {
         myCount.setCount(myCount.getCount()+1);
     }
 
-    public int getNumberCount(){
+    @Override
+    public int getNumberCount() {
         return myCount.getCount();
     }
 }

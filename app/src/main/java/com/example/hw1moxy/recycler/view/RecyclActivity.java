@@ -27,7 +27,6 @@ public class RecyclActivity extends AppCompatActivity{
         }
 
         initRecycleFav(list);
-
     }
 
     private void initRecycleFav(ArrayList<Foto> list) {
