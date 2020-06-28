@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HW1Moxy</string>
+    <string name="hint_et">Напишите слово</string>
+    <string name="caption_button">присоединить текст</string>
+</resources>
